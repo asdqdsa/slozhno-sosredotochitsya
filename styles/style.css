@@ -1,5 +1,341 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  /* сохраните  в разметке и стилях класс page. На его основе работает скрипт. */
+  background-attachment: fixed;
+  background-image: url('../images/cover-image-dark.png');
+  background-position: center;
+  background-size: cover;
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  /* line-height: 130%; */
+  max-inline-size: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  /* justify-content: center; */
+}
+
+.header {
+  /* position: relative; */
+  display: grid;
+  /* align-items: center; */
+  /* justify-content: end; */
+  /* min-block-size: 66.8rem; */
+  /* padding-block: 1rem;
+  padding-inline: 1rem; */
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.decorated-zone::before {
+  position: relative;
+  display: block;
+  block-size: 2.5rem;
+  border-block-start: 0.1rem solid var(--secondary-color);
+  border-inline-end: 0.1rem solid var(--secondary-color);
+  content: '';
+  inline-size: 2.5rem;
+  /* inset-block-start: -2.5rem; */
+  inset-inline-start: calc(100% - 2.6rem);
+}
+
+.decorated-zone::after {
+  position: relative;
+  display: block;
+  block-size: 2.5rem;
+  border-block-end: 0.1rem solid var(--secondary-color);
+  border-inline-start: 0.1rem solid var(--secondary-color);
+  content: '';
+  inline-size: 2.5rem;
+  /* inset-block-start: -2.5rem; */
+}
+
+.header__decoration {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--secondary-color);
+  gap: 1rem;
+  /* right: 100px; */
+  inset-block-start: -2.4rem;
+  inset-inline-end: 0.9rem;
+  /* inset-inline-start: calc(100% - 6.2rem); */
+}
+
+.visually-hidden1 {
+  position: absolute;
+  overflow: hidden;
+  block-size: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  inline-size: 1px;
+  white-space: nowrap;
+}
+
+.header__decoration::after {
+  display: block;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  block-size: 0.9rem;
+  content: '';
+  filter: drop-shadow(0 0 0.4rem var(--secondary-color));
+  inline-size: 0.9rem;
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--secondary-color);
+  padding-block-start: 1.6rem;
+}
+
+.header__theme-menu-list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header__theme-menu-button {
+  border: none;
+  background-color: transparent;
+  padding-inline: 1.3rem;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 0.1rem solid var(--secondary-color);
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  /* outline: 0.1rem solid var(--secondary-color); */
+  outline: 0.1rem solid rgba(255 0 112 / 40%);
+}
+
+.header-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+  /* justify-content: space-around; */
+  padding-block-end: 3.1rem;
+  padding-block-start: 7rem;
+}
+
+.header__title {
+  /* font-size: clamp(7.25rem, 7.0115rem + 0.0636vw, 7.5rem); */
+  font-size: 11.6rem;
+  color: var(--secondary-shadow-color);
+  /* font-size: clamp(11.6rem, 11.2183rem + 1.0178vw, 12rem); */
+  text-shadow: 4px 4px 0 var(--secondary-color);
+  line-height: 9.57rem;
+}
+
+.header__text {
+}
+
+.text-decor {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  line-height: 2.34rem;
+}
+
+.text-line-break {
+  display: block;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  gap: 5rem;
+  padding-inline: 1rem;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main__title {
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.34rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article__title {
+  font-size: 1.8rem;
+}
+
+.article_title-decor {
+  font-weight: normal;
+}
+
+.article__hyperlink {
+  text-shadow: 0.2rem 0.2rem 0 var(--secondary-color);
+}
+
+.article__hyperlink:hover {
+  border-block-end: 0.1rem solid var(--text-color);
+  cursor: pointer;
+}
+
+.article__hyperlink:focus {
+  outline: 0.1rem solid var(--text-color);
+}
+
+.article__text {
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 2.34rem;
+}
+
+.image-gallery {
+  gap: 10px;
+}
+
+.article__image {
+  object-fit: contain;
+  object-position: center;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-block-size: 66.7rem;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.decorated-zone1::before {
+  position: relative;
+  display: block;
+  block-size: 2.5rem;
+  border-block-start: 0.1rem solid var(--secondary-color);
+  border-inline-end: 0.1rem solid var(--secondary-color);
+  content: '';
+  inline-size: 2.5rem;
+  /* inset-block-start: -2.5rem; */
+  inset-inline-start: calc(100% - 2.6rem);
+}
+
+.decorated-zone1::after {
+  position: relative;
+  display: block;
+  block-size: 2.5rem;
+  border-block-end: 0.1rem solid var(--secondary-color);
+  border-inline-start: 0.1rem solid var(--secondary-color);
+  content: '';
+  inline-size: 2.5rem;
+  /* inset-block-start: -2.5rem; */
+}
+
+.footer__text {
+  display: block;
+  color: var(--secondary-shadow-color);
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
+  font-size: 11.6rem;
+  font-weight: bold;
+  line-height: 9.57rem;
+  text-shadow: 0.2rem 0.2rem 0 var(--secondary-color);
+}
+
+@media (width >= 768px) {
+  .page {
+    max-inline-size: 76.8rem;
+  }
+
+  .header {
+    padding-block: 2rem;
+    padding-inline: 2rem;
+  }
+
+  .header__theme-menu {
+    padding-block-start: 12.3rem;
+  }
+
+  .header-inner-wrapper {
+    gap: 16.1rem;
+    padding-block-end: 16.3rem;
+    padding-block-start: 17.8rem;
+  }
+
+  .header__title {
+    position: relative;
+    font-size: 12rem;
+    inset-inline-start: -2rem;
+    line-height: 9.9rem;
+  }
+
+  .header__text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    max-inline-size: 36.4rem;
+  }
+
+  .main {
+    padding-inline: 2rem;
+  }
+
+  .main__section {
+    /* flex-direction: row; */
+  }
+
+  .footer {
+    padding-block: 2rem;
+    padding-inline: 2rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .page {
+    max-inline-size: 102.4rem;
+  }
+
+  .header__theme-menu {
+    position: relative;
+    justify-content: center;
+    inset-block-start: -4.9rem;
+    padding-block: 0;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header-inner-wrapper {
+    gap: 11.3rem;
+    /* padding-block-end: 16.3rem; */
+    padding-block-end: 9rem;
+    padding-block-start: 22.7rem;
+  }
+
+  .header__title {
+    font-size: 15.7rem;
+    inset-inline-start: -2rem;
+    line-height: 12.9525rem;
+  }
+
+  .header__text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    min-inline-size: 49.1rem;
+  }
 }
