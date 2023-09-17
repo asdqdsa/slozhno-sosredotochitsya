@@ -14,13 +14,13 @@
 
 .header {
   display: grid;
+  background-image: var(--bg-img);
   padding-block: 1rem;
   padding-inline: 1rem;
 }
 
 .title-decor {
   background-color: var(--primary-color, #000028);
-  background-image: var(--bg-img);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
