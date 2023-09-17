@@ -20,7 +20,7 @@
 
 <body class="page">
   <header class="header decorated-zone">
-    <div class="header__decoration visually-hidden">REC</div>
+    <div class="header__decoration visually-hidden" aria-hidden="true">REC</div>
     <nav class="header__theme-menu">
       <ul class="header__theme-menu-list">
         <li class="header__theme-menu-item">
@@ -53,7 +53,7 @@
   </header>
 
   <main class="main">
-    <section class="main__section">
+    <section class="main__section section-concentrate">
       <h2 class="main__title">Почему сосредоточиться так сложно</h2>
       <article class="article">
         <h3 class="article__title text-decor">Многозадачность</h3>
@@ -77,8 +77,8 @@
         </p>
       </article>
     </section>
-    <section class="main__section">
-      <h2 class="main__title">Что снижает концентрацию внимания?</h2>
+    <section class="main__section section-concentrate-peeve">
+      <h2 class="main__title concentrate-peeve">Что снижает концентрацию внимания?</h2>
       <article class="article">
         <h3 class="article__title text-decor">Многозадачность</h3>
         <p class="article__text">Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация (и
@@ -105,8 +105,9 @@
         </p>
       </article>
     </section>
-    <section class="main__section">
-      <h2 class="main__title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
+    <section class="main__section section-concentrate-tips">
+      <h2 class="main__title section-concentrate-tips__title">Как концентрироваться лучше, чем золотая рыбка (то есть
+        дольше трёх секунд)</h2>
       <h3 class="article__title text-decor">5 простых (на самом деле не очень) советов</h3>
       <article class="article">
         <h4 class="text-decor article_title-decor">Представьте небо и облака</h4>
@@ -152,16 +153,14 @@
     </section>
     <section class="main__section image-gallery">
       <h3 class="article__title text-decor">А можно в картинках?</h3>
-      <img class="article__image" src="./images/sunset.png" alt="Рисунок заката с улетающими в даль птицами"
-        loading="lazy">
-      <img class="article__image" src="./images/ice-cream.png" alt="Рисунок заката с улетающими в даль птицами"
-        loading="lazy">
-      <img class="article__image" src="./images/tape.png" alt="Рисунок заката с улетающими в даль птицами"
-        loading="lazy">
-      <img class="article__image" src="./images/books.png" alt="Рисунок заката с улетающими в даль птицами"
-        loading="lazy">
-      <img class="article__image" src="./images/street.png" alt="Рисунок заката с улетающими в даль птицами"
-        loading="lazy">
+      <div class="image-gallery-wrapper">
+        <img class="article__image img-sunset" src="./images/sunset.png"
+          alt="Рисунок заката с улетающими в даль птицами" loading="lazy">
+        <img class="article__image img-icecream" src="./images/ice-cream.png" alt="" loading="lazy">
+        <img class="article__image img-tape" src="./images/tape.png" alt="" loading="lazy">
+        <img class="article__image img-books" src="./images/books.png" alt="" loading="lazy">
+        <img class="article__image img-street" src="./images/street.png" alt="" loading="lazy">
+      </div>
     </section>
   </main>
   <footer class="footer decorated-zone">

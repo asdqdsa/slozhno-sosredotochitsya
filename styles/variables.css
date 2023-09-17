@@ -5,14 +5,10 @@
 
 :root {
   --primary-color: #000028;
-  --text-color: #f1b2ce;
   --secondary-color: #ff0070;
-  --secondary-shadow-color: #db00ff;
-  --bg-color: #000028;
-  --blur: 10px;
-  --accent-color: ;
-  --padding: 10px;
-  --error: #ce0606;
-  --success: #009070;
-  --white: #fff;
+  --accent-color: #db00ff;
+  --text-color: #f1b2ce;
+  /* --bg-color: #000028; */
+  /* --secondary-shadow-color: #db00ff; */
+  --main-font: 'IBM Plex mono';
 }

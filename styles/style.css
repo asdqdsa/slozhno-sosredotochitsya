@@ -2,19 +2,20 @@
 
 .page {
   /* сохраните  в разметке и стилях класс page. На его основе работает скрипт. */
+  display: flex;
+  flex-direction: column;
   background-attachment: fixed;
-  background-image: url('../images/cover-image-dark.png');
+  background-image: url('../images/cover-image.png');
   background-position: center;
   background-size: cover;
-  color: var(--text-color);
-  font-family: 'IBM Plex Mono', Arial, sans-serif;
+  color: var(--text-color, #f1b2ce);
+  /* font-family: 'IBM Plex Mono'; */
+  font-family: var(--main-font, 'Courier New', monospace);
   font-size: 1.8rem;
   font-weight: normal;
   /* line-height: 130%; */
   max-inline-size: 37.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  /* gap: 4rem; */
   /* justify-content: center; */
 }
 
@@ -34,8 +35,8 @@
   position: relative;
   display: block;
   block-size: 2.5rem;
-  border-block-start: 0.1rem solid var(--secondary-color);
-  border-inline-end: 0.1rem solid var(--secondary-color);
+  border-block-start: 0.1rem solid var(--secondary-color, #ff0070);
+  border-inline-end: 0.1rem solid var(--secondary-color, #ff0070);
   content: '';
   inline-size: 2.5rem;
   /* inset-block-start: -2.5rem; */
@@ -46,8 +47,8 @@
   position: relative;
   display: block;
   block-size: 2.5rem;
-  border-block-end: 0.1rem solid var(--secondary-color);
-  border-inline-start: 0.1rem solid var(--secondary-color);
+  border-block-end: 0.1rem solid var(--secondary-color, #ff0070);
+  border-inline-start: 0.1rem solid var(--secondary-color, #ff0070);
   content: '';
   inline-size: 2.5rem;
   /* inset-block-start: -2.5rem; */
@@ -58,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  color: var(--secondary-color);
+  color: var(--secondary-color, #ff0070);
   gap: 1rem;
   /* right: 100px; */
   inset-block-start: -2.4rem;
@@ -79,18 +80,24 @@
 .header__decoration::after {
   display: block;
   border-radius: 50%;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color, #ff0070);
   block-size: 0.9rem;
-  content: '';
-  filter: drop-shadow(0 0 0.4rem var(--secondary-color));
   inline-size: 0.9rem;
+  /* size: 0.9rem 0.9rem; */
+  content: '';
+  filter: drop-shadow(0 0 0.4rem var(--secondary-color, #ff0070) ;);
+  filter: blur(0.15rem);
 }
 
 .header__theme-menu {
   display: flex;
   justify-content: flex-end;
-  color: var(--secondary-color);
+  color: var(--secondary-color, #ff0070);
   padding-block-start: 1.6rem;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
 }
 
 .header__theme-menu-list {
@@ -106,15 +113,15 @@
   text-transform: lowercase;
 }
 
-.header__theme-menu-button:focus {
-  border-block-end: 0.1rem solid var(--secondary-color);
+.header__theme-menu-button:focus-visible {
+  border-block-end: 0.1rem solid var(--secondary-color, #ff0070);
   outline: none;
 }
 
 .header__theme-menu-button:hover {
   cursor: pointer;
-  /* outline: 0.1rem solid var(--secondary-color); */
-  outline: 0.1rem solid rgba(255 0 112 / 40%);
+  /* outline: 0.1rem solid var(--secondary-color, #ff0070); */
+  outline: 0.1rem solid var(--hover-color, #ff007066);
 }
 
 .header-inner-wrapper {
@@ -128,10 +135,10 @@
 
 .header__title {
   /* font-size: clamp(7.25rem, 7.0115rem + 0.0636vw, 7.5rem); */
+  color: var(--accent-color, #db00ff);
   font-size: 11.6rem;
-  color: var(--secondary-shadow-color);
   /* font-size: clamp(11.6rem, 11.2183rem + 1.0178vw, 12rem); */
-  text-shadow: 4px 4px 0 var(--secondary-color);
+  text-shadow: 4px 4px 0 var(--secondary-color, #ff0070);
   line-height: 9.57rem;
 }
 
@@ -139,8 +146,8 @@
 }
 
 .text-decor {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--secondary-color, #ff0070);
+  color: var(--primary-color, #000028);
   font-weight: bold;
   line-height: 2.34rem;
 }
@@ -152,8 +159,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-color);
+  background-color: var(--primary-color, #000028);
   gap: 5rem;
+  padding-block: 4rem;
   padding-inline: 1rem;
 }
 
@@ -164,7 +172,7 @@
 }
 
 .main__title {
-  color: var(--secondary-color);
+  color: var(--secondary-color, #ff0070);
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.34rem;
@@ -185,16 +193,16 @@
 }
 
 .article__hyperlink {
-  text-shadow: 0.2rem 0.2rem 0 var(--secondary-color);
+  text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff0070);
 }
 
 .article__hyperlink:hover {
-  border-block-end: 0.1rem solid var(--text-color);
+  border-block-end: 0.1rem solid var(--text-color, #f1b2ce);
   cursor: pointer;
 }
 
-.article__hyperlink:focus {
-  outline: 0.1rem solid var(--text-color);
+.article__hyperlink:focus-visible {
+  outline: 0.1rem solid var(--text-color, #f1b2ce);
 }
 
 .article__text {
@@ -204,7 +212,13 @@
 }
 
 .image-gallery {
-  gap: 10px;
+  gap: 1rem;
+}
+
+.image-gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .article__image {
@@ -217,6 +231,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* align-items: center; */
+  background-color: var(--primary-color, #000028);
   min-block-size: 66.7rem;
   padding-block: 1rem;
   padding-inline: 1rem;
@@ -226,8 +242,8 @@
   position: relative;
   display: block;
   block-size: 2.5rem;
-  border-block-start: 0.1rem solid var(--secondary-color);
-  border-inline-end: 0.1rem solid var(--secondary-color);
+  border-block-start: 0.1rem solid var(--secondary-color, #ff0070);
+  border-inline-end: 0.1rem solid var(--secondary-color, #ff0070);
   content: '';
   inline-size: 2.5rem;
   /* inset-block-start: -2.5rem; */
@@ -238,21 +254,23 @@
   position: relative;
   display: block;
   block-size: 2.5rem;
-  border-block-end: 0.1rem solid var(--secondary-color);
-  border-inline-start: 0.1rem solid var(--secondary-color);
+  border-block-end: 0.1rem solid var(--secondary-color, #ff0070);
+  border-inline-start: 0.1rem solid var(--secondary-color, #ff0070);
   content: '';
   inline-size: 2.5rem;
   /* inset-block-start: -2.5rem; */
 }
 
 .footer__text {
-  display: block;
-  color: var(--secondary-shadow-color);
-  font-family: 'IBM Plex Mono', Arial, sans-serif;
+  /* display: flex; */
+  align-self: center;
+  color: var(--accent-color, #db00ff);
+  /* font-family: var(--main-font, 'Courier New', monospace); */
   font-size: 11.6rem;
   font-weight: bold;
   line-height: 9.57rem;
-  text-shadow: 0.2rem 0.2rem 0 var(--secondary-color);
+  /* line-height: 82.5%; */
+  text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff0070);
 }
 
 @media (width >= 768px) {
@@ -271,7 +289,7 @@
 
   .header-inner-wrapper {
     gap: 16.1rem;
-    padding-block-end: 16.3rem;
+    padding-block-end: 13.8rem;
     padding-block-start: 17.8rem;
   }
 
@@ -290,16 +308,97 @@
   }
 
   .main {
+    gap: 8rem;
+    padding-block: 6rem;
     padding-inline: 2rem;
+  }
+
+  .main__title {
+    grid-row: span 2;
+    inline-size: 23.6rem;
   }
 
   .main__section {
     /* flex-direction: row; */
   }
 
+  .section-concentrate {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .section-concentrate-tips {
+    display: grid;
+    /* grid-template-columns: 23.4rem auto; */
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .section-concentrate-tips__title {
+    grid-row: span 6;
+  }
+
+  .article__image {
+    block-size: 100%;
+    inline-size: 100%;
+    /* object-fit: contain; */
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .img-sunset {
+    grid-area: sunset;
+  }
+
+  .img-icecream {
+    grid-area: icecream;
+  }
+
+  .img-tape {
+    grid-area: tape;
+  }
+
+  .img-books {
+    grid-area: books;
+  }
+
+  .img-street {
+    aspect-ratio: 641.7 / 428;
+    grid-area: street;
+    padding-block-start: 0.5rem;
+  }
+
+  .image-gallery {
+    gap: 2rem;
+  }
+
+  .image-gallery-wrapper {
+    display: grid;
+    /* flex-direction: column; */
+    gap: 2rem;
+    /* grid-template-columns: repeat(3, minmax(2.5rem, 1fr));
+    grid-template-rows: repeat(3, minmax(2.5rem, 1fr)); */
+
+    /* grid-auto-rows: 20rem;
+    grid-auto-flow: dense; */
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, minmax(2.5rem, 1fr));
+    grid-template-areas:
+      'sunset sunset icecream'
+      'tape books icecream'
+      'tape street street';
+  }
+
   .footer {
     padding-block: 2rem;
     padding-inline: 2rem;
+    min-block-size: 102.4rem;
+    /* min-block-size: 100vh; */
+  }
+
+  .footer__text {
+    font-size: 12rem;
+    line-height: 9.9rem;
   }
 }
 
@@ -337,5 +436,28 @@
     flex-direction: column;
     align-self: flex-end;
     min-inline-size: 49.1rem;
+  }
+
+  .main__title {
+    inline-size: 31.5rem;
+  }
+
+  .concentrate-peeve {
+    grid-column: span 3;
+  }
+
+  .section-concentrate-peeve {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, auto); */
+  }
+
+  .footer {
+    min-block-size: 76.8rem;
+  }
+
+  .footer__text {
+    font-size: 15.7rem;
+    line-height: 12.9rem;
   }
 }
