@@ -6,7 +6,7 @@
   --text-color: #353430;
   --hover-color: #32312d66;
   --bg-light-color: #fff1f7;
-  --bg-img: var(--bg-img-light);
+  --bg-img: url('../images/cover-image-light.png');
 }
 
 .page.theme_light .header__decoration {

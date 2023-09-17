@@ -9,6 +9,5 @@
   --main-font: 'IBM Plex mono';
   --bg-img-light: url('../images/cover-image-light.png');
   --bg-img-dark: url('../images/cover-image-dark.png');
-  --bg-img-default: url('../images/cover-image.png');
-  --bg-img: var(--bg-img-dark);
+  --bg-img: url('../images/cover-image-dark.png');
 }

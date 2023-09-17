@@ -4,7 +4,7 @@
   --accent-color: #db00ff;
   --text-color: #f1b2ce;
   --hover-color: #ff007066;
-  --bg-img: var(--bg-img-dark);
+  --bg-img: url('../images/cover-image-dark.png');
 }
 
 .page.theme_dark .title-decor {
@@ -62,7 +62,7 @@
     --accent-color: #db00ff;
     --text-color: #f1b2ce;
     --hover-color: #ff007066;
-    --bg-img: var(--bg-img-dark);
+    --bg-img: url('../images/cover-image-dark.png');
   }
 
   :root .title-decor {
