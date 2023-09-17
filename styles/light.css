@@ -6,7 +6,7 @@
   --text-color: #353430;
   --hover-color: #32312d66;
   --bg-light-color: #fff1f7;
-  --bg-img: url('../images/cover-image-light.png');
+  --bg-img: url(../images/cover-image-light.png);
 }
 
 .page.theme_light .header__decoration {
@@ -14,7 +14,7 @@
 }
 
 .page.theme_light .title__decor {
-  background-color: var(--bg-light-color: #fff1f7);
+  background-color: var(--bg-light-color, #fff1f7);
   background-image: var(--bg-img-light);
 }
 

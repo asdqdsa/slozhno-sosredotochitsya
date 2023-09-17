@@ -56,13 +56,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  root: {
+  :root {
     --primary-color: #000028;
     --secondary-color: #ff0070;
     --accent-color: #db00ff;
     --text-color: #f1b2ce;
     --hover-color: #ff007066;
-    --bg-img: url('../images/cover-image-dark.png');
+    --bg-img: url(../images/cover-image-dark.png);
   }
 
   :root .title-decor {
