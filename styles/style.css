@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   background-attachment: fixed;
-  background-color: var(--primary-color, #000028);
   background-image: var(--bg-img);
   background-position: center;
   background-size: cover;
@@ -15,10 +14,16 @@
 
 .header {
   display: grid;
-  background-color: var(--primary-color, #000028);
-  background-image: var(--bg-img);
   padding-block: 1rem;
   padding-inline: 1rem;
+}
+
+.title-decor {
+  background-color: var(--primary-color, #000028);
+  background-image: var(--bg-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .decorated-zone::before {

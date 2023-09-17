@@ -9,13 +9,13 @@
   --bg-img: var(--bg-img-light);
 }
 
-.page.theme_light .header {
-  background-color: var(--bg-light-color, #fff1f7);
-  background-image: var(--bg-img-light);
-}
-
 .page.theme_light .header__decoration {
   opacity: 0;
+}
+
+.page.theme_light .title__decor {
+  background-color: var(--bg-light-color: #fff1f7);
+  background-image: var(--bg-img-light);
 }
 
 .page.theme_light .decorated-zone::before {
@@ -81,7 +81,7 @@
     --bg-img: var(--bg-img-light);
   }
 
-  :root .header {
+  :root .title-decor {
     background-color: var(--bg-light-color, #fff1f7);
   }
 

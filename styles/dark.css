@@ -7,7 +7,7 @@
   --bg-img: var(--bg-img-dark);
 }
 
-.page.theme_light .header {
+.page.theme_dark .title-decor {
   background-color: var(--primary-color, #000028);
   background-image: var(--bg-img-dark);
 }
