@@ -7,57 +7,46 @@
   --bg-img: var(--bg-img-dark);
 }
 
-.theme_dark .header__decoration {
+.page.theme_dark .header__decoration {
   opacity: 1;
 }
 
-.theme_dark .decorated-zone::before {
+.page.theme_dark .decorated-zone::before {
   border-block-start: 0.1rem solid var(--secondary-color, #ff0070);
   border-inline-end: 0.1rem solid var(--secondary-color, #ff0070);
 }
 
-.theme_dark .decorated-zone::after {
+.page.theme_dark .decorated-zone::after {
   border-block-end: 0.1rem solid var(--secondary-color, #ff0070);
   border-inline-start: 0.1rem solid var(--secondary-color, #ff0070);
 }
 
-.theme_dark .header__theme-menu-item {
+.page.theme_dark .header__theme-menu-item {
   color: var(--secondary-color, #ff0070);
 }
 
-.theme_dark .header__title {
-  color: var(--accent-color: #db00ff);
+.page.theme_dark .header__title {
+  color: var(--accent-color, #db00ff);
   text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff0070);
 }
 
-.theme_dark .text-decor {
+.page.theme_dark .text-decor {
   color: var(--primary-color, #000028);
 }
 
-.theme_dark .main {
+.page.theme_dark .main {
   background-color: var(--primary-color, #000028);
 }
 
-.theme_dark .main__title {
+.page.theme_dark .main__title {
   color: var(--secondary-color, #ff0070);
 }
 
-.theme_dark .footer {
+.page.theme_dark .footer {
   background-color: var(--primary-color, #000028);
 }
 
-.theme_dark .footer__text {
+.page.theme_dark .footer__title {
   color: var(--accent-color, #db00ff);
   text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff0070);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #000028;
-    --secondary-color: #ff0070;
-    --accent-color: #db00ff;
-    --text-color: #f1b2ce;
-    --hover-color: #ff007066;
-    --bg-img: var(--bg-img-dark);
-  }
 }
