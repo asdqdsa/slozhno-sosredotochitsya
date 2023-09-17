@@ -9,9 +9,9 @@
   --bg-img: var(--bg-img-light);
 }
 
-.page.theme_light .page {
+.page.theme_light .header {
   background-color: var(--bg-light-color, #fff1f7);
-  background-image: var(--bg-img);
+  background-image: var(--bg-img-light);
 }
 
 .page.theme_light .header__decoration {
@@ -34,7 +34,7 @@
 
 .page.theme_light .header__title {
   color: var(--primary-color, #ffc2e6);
-  text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb;);
+  text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb);
 }
 
 .page.theme_light .text-decor {
@@ -55,7 +55,7 @@
 
 .page.theme_light .footer__title {
   color: var(--primary-color, #ffc2e6);
-  text-shadow: 0.2rem 0.2rem 0 var(--accent-color, #f1b2ce);
+  text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff8dcb);
 }
 
 @media (width >= 1024px) {
@@ -81,9 +81,8 @@
     --bg-img: var(--bg-img-light);
   }
 
-  :root .page {
+  :root .header {
     background-color: var(--bg-light-color, #fff1f7);
-    background-image: var(--bg-img);
   }
 
   :root .header__decoration {
@@ -106,7 +105,7 @@
 
   :root .header__title {
     color: var(--primary-color, #ffc2e6);
-    text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb;);
+    text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb);
   }
 
   :root .text-decor {
@@ -127,7 +126,7 @@
 
   :root .footer__title {
     color: var(--primary-color, #ffc2e6);
-    text-shadow: 0.2rem 0.2rem 0 var(--accent-color, #f1b2ce);
+    text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff8dcb);
   }
 
   @media (width >= 1024px) {
