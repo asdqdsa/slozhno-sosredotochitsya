@@ -75,7 +75,6 @@
 }
 
 .header__theme-menu-button_active {
-  opacity: 0.4;
   outline: 0.1rem solid currentColor;
   pointer-events: none;
 }

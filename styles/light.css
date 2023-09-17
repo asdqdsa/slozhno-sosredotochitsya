@@ -1,7 +1,8 @@
 .page.theme_light {
-  --primary-color: #ffc2e6;
+  --primary-color: #fff1f7;
   --secondary-color: #ff8dcb;
   --accent-color: #f1b2ce;
+  --title-color: #ffc2e6;
   --secondary-accent-color: #ff0070;
   --text-color: #353430;
   --hover-color: #32312d66;
@@ -33,7 +34,7 @@
 }
 
 .page.theme_light .header__title {
-  color: var(--primary-color, #ffc2e6);
+  color: var(--title-color, #ffc2e6);
   text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb);
 }
 
@@ -41,20 +42,12 @@
   color: var(--text-color, #353430);
 }
 
-.page.theme_light .main {
-  background-color: var(--bg-light-color, #fff1f7);
-}
-
 .page.theme_light .main__title {
   color: var(--text-color, #353430);
 }
 
-.page.theme_light .footer {
-  background-color: var(--bg-light-color, #fff1f7);
-}
-
 .page.theme_light .footer__title {
-  color: var(--primary-color, #ffc2e6);
+  color: var(--title-color, #ffc2e6);
   text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff8dcb);
 }
 
@@ -64,21 +57,22 @@
   }
 
   .page.theme_light .footer__title {
-    color: var(--primary-color, #ffc2e6);
+    color: var(--title-color, #ffc2e6);
     text-shadow: 0.2rem 0.2rem 0 var(--secondary-accent-color, #ff0070);
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --primary-color: #ffc2e6;
+    --primary-color: #fff1f7;
     --secondary-color: #ff8dcb;
     --accent-color: #f1b2ce;
+    --title-color: #ffc2e6;
     --secondary-accent-color: #ff0070;
     --text-color: #353430;
     --hover-color: #32312d66;
     --bg-light-color: #fff1f7;
-    --bg-img: var(--bg-img-light);
+    --bg-img: url(../images/cover-image-light.png);
   }
 
   :root .header__decoration {
@@ -100,7 +94,7 @@
   }
 
   :root .header__title {
-    color: var(--primary-color, #ffc2e6);
+    color: var(--title-color, #ffc2e6);
     text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb);
   }
 
@@ -113,7 +107,7 @@
   }
 
   :root .footer__title {
-    color: var(--primary-color, #ffc2e6);
+    color: var(--title-color, #ffc2e6);
     text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff8dcb);
   }
 
@@ -123,7 +117,6 @@
     }
 
     :root .footer__title {
-      color: var(--primary-color, #ffc2e6);
       text-shadow: 0.2rem 0.2rem 0 var(--secondary-accent-color, #ff0070);
     }
   }
