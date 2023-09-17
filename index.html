@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
   <title>Сложно сосредоточиться</title>
   <link rel="icon" href="./images/favicon.ico" sizes="any">
@@ -154,17 +154,41 @@
     <section class="main__section image-gallery">
       <h3 class="article__title text-decor">А можно в картинках?</h3>
       <div class="image-gallery-wrapper">
-        <img class="article__image img-sunset" src="./images/sunset.png"
-          alt="Рисунок заката с улетающими в даль птицами" loading="lazy">
-        <img class="article__image img-icecream" src="./images/ice-cream.png" alt="" loading="lazy">
-        <img class="article__image img-tape" src="./images/tape.png" alt="" loading="lazy">
-        <img class="article__image img-books" src="./images/books.png" alt="" loading="lazy">
-        <img class="article__image img-street" src="./images/street.png" alt="" loading="lazy">
+        <picture class="img-sunset article__image-wrapper">
+          <source srcset="./images/sunset.avif 1x" type="image/avif">
+          <source srcset="./images/sunset.webp 1x" type="image/webp">
+          <img class="article__image " src="./images/sunset.png" alt="Рисунок заката с улетающими в даль птицами"
+            loading="lazy">
+        </picture>
+        <picture class="img-icecream article__image-wrapper">
+          <source srcset="./images/ice-cream.avif 1x" type="image/avif">
+          <source srcset="./images/ice-cream.webp 1x" type="image/webp">
+          <img class="article__image" src="./images/ice-cream.png"
+            alt="Рисунок тарелки с шариками мороженого с нарисованными лицами" loading="lazy">
+        </picture>
+        <picture class="img-tape article__image-wrapper">
+          <source srcset="./images/tape.avif 1x" type="image/avif">
+          <source srcset="./images/tape.webp 1x" type="image/webp">
+          <img class="article__image " src="./images/tape.png"
+            alt="Стилизованный рисунок аудиокассеты с предметами интерфейса и указателем мыши" loading="lazy">
+        </picture>
+        <picture class="img-books article__image-wrapper">
+          <source srcset="./images/books.avif 1x" type="image/avif">
+          <source srcset="./images/books.webp 1x" type="image/webp">
+          <img class="article__image " src="./images/books.png" alt="Рисунок стопки книг с чашкой сверху"
+            loading="lazy">
+        </picture>
+        <picture class="img-street article__image-wrapper">
+          <source srcset="./images/street.avif 1x" type="image/avif">
+          <source srcset="./images/street.webp 1x" type="image/webp">
+          <img class="article__image " src="./images/street.png" alt="Рисунок вида улицы японских двух-этажных зданий"
+            loading="lazy">
+        </picture>
       </div>
     </section>
   </main>
   <footer class="footer decorated-zone">
-    <p class="footer__text">focus</p>
+    <h2 class="footer__text">focus</h2>
   </footer>
   <script src="./scripts/script.js"></script>
 </body>

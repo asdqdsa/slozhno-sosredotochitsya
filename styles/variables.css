@@ -1,14 +1,14 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-
 :root {
   --primary-color: #000028;
   --secondary-color: #ff0070;
   --accent-color: #db00ff;
   --text-color: #f1b2ce;
-  /* --bg-color: #000028; */
-  /* --secondary-shadow-color: #db00ff; */
+  --hover-color: #ff007066;
+  --secondary-accent-color: #ff0070;
+  --bg-light-color: #fff1f7;
   --main-font: 'IBM Plex mono';
+  --bg-img-light: url(../images/cover-image-light.png);
+  --bg-img-dark: url(../images/cover-image-dark.png);
+  --bg-img-default: url(../images/cover-image.png);
+  --bg-img: var(--bg-img-default);
 }
