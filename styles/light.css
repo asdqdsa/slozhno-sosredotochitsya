@@ -9,58 +9,63 @@
   --bg-img: var(--bg-img-light);
 }
 
-.theme_light .header__decoration {
+.page.theme_light .page {
+  background-color: var(--bg-light-color, #fff1f7);
+  background-image: var(--bg-img);
+}
+
+.page.theme_light .header__decoration {
   opacity: 0;
 }
 
-.theme_light .decorated-zone::before {
+.page.theme_light .decorated-zone::before {
   border-block-start: 0.1rem solid var(--text-color, #353430);
   border-inline-end: 0.1rem solid var(--text-color, #353430);
 }
 
-.theme_light .decorated-zone::after {
+.page.theme_light .decorated-zone::after {
   border-block-end: 0.1rem solid var(--text-color, #353430);
   border-inline-start: 0.1rem solid var(--text-color, #353430);
 }
 
-.theme_light .header__theme-menu-item {
+.page.theme_light .header__theme-menu-item {
   color: var(--text-color, #353430);
 }
 
-.theme_light .header__title {
+.page.theme_light .header__title {
   color: var(--primary-color, #ffc2e6);
   text-shadow: 0.4rem 0.4rem 0 var(--accent-color, #f1b2ce);
 }
 
-.theme_light .text-decor {
+.page.theme_light .text-decor {
   color: var(--text-color, #353430);
 }
 
-.theme_light .main {
+.page.theme_light .main {
   background-color: var(--bg-light-color, #fff1f7);
 }
 
-.theme_light .main__title {
+.page.theme_light .main__title {
   color: var(--text-color, #353430);
 }
 
-.theme_light .footer {
+.page.theme_light .footer {
   background-color: var(--bg-light-color, #fff1f7);
 }
 
-.theme_light .footer__title {
+.page.theme_light .footer__title {
   color: var(--primary-color, #ffc2e6);
   text-shadow: 0.2rem 0.2rem 0 var(--accent-color, #f1b2ce);
 }
 
 @media (width >= 1024px) {
-  .theme_light .header__title {
+  .page.theme_light .header__title {
     text-shadow: 0.4rem 0.4rem 0 var(--secondary-accent-color, #ff0070);
   }
 
-  .theme_light .footer__title {
+  .page.theme_light .footer__title {
     color: var(--primary-color, #ffc2e6);
-    text-shadow: 0.4rem 0.4rem 0 var(--secondary-accent-color, #ff0070);
+    text-shadow: 0.2rem 0.2rem 0 var(--secondary-accent-color, #ff0070);
   }
 }
 
@@ -74,6 +79,11 @@
     --hover-color: #32312d66;
     --bg-light-color: #fff1f7;
     --bg-img: var(--bg-img-light);
+  }
+
+  :root .page {
+    background-color: var(--bg-light-color, #fff1f7);
+    background-image: var(--bg-img);
   }
 
   :root .header__decoration {
@@ -127,7 +137,7 @@
 
     :root .footer__title {
       color: var(--primary-color, #ffc2e6);
-      text-shadow: 0.4rem 0.4rem 0 var(--secondary-accent-color, #ff0070);
+      text-shadow: 0.2rem 0.2rem 0 var(--secondary-accent-color, #ff0070);
     }
   }
 }
