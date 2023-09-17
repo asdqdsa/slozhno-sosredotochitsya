@@ -34,7 +34,7 @@
 
 .page.theme_light .header__title {
   color: var(--primary-color, #ffc2e6);
-  text-shadow: 0.4rem 0.4rem 0 var(--accent-color, #f1b2ce);
+  text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb;);
 }
 
 .page.theme_light .text-decor {
@@ -106,7 +106,7 @@
 
   :root .header__title {
     color: var(--primary-color, #ffc2e6);
-    text-shadow: 0.4rem 0.4rem 0 var(--accent-color, #f1b2ce);
+    text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff8dcb;);
   }
 
   :root .text-decor {

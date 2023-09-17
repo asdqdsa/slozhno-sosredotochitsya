@@ -50,3 +50,58 @@
   color: var(--accent-color, #db00ff);
   text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff0070);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #000028;
+    --secondary-color: #ff0070;
+    --accent-color: #db00ff;
+    --text-color: #f1b2ce;
+    --hover-color: #ff007066;
+    --bg-img: var(--bg-img-dark);
+  }
+
+  :root .header__decoration {
+    opacity: 1;
+  }
+
+  :root .decorated-zone::before {
+    border-block-start: 0.1rem solid var(--secondary-color, #ff0070);
+    border-inline-end: 0.1rem solid var(--secondary-color, #ff0070);
+  }
+
+  :root .decorated-zone::after {
+    border-block-end: 0.1rem solid var(--secondary-color, #ff0070);
+    border-inline-start: 0.1rem solid var(--secondary-color, #ff0070);
+  }
+
+  :root .header__theme-menu-item {
+    color: var(--secondary-color, #ff0070);
+  }
+
+  :root .header__title {
+    color: var(--accent-color, #db00ff);
+    text-shadow: 0.4rem 0.4rem 0 var(--secondary-color, #ff0070);
+  }
+
+  :root .text-decor {
+    color: var(--primary-color, #000028);
+  }
+
+  :root .main {
+    background-color: var(--primary-color, #000028);
+  }
+
+  :root .main__title {
+    color: var(--secondary-color, #ff0070);
+  }
+
+  :root .footer {
+    background-color: var(--primary-color, #000028);
+  }
+
+  :root .footer__title {
+    color: var(--accent-color, #db00ff);
+    text-shadow: 0.2rem 0.2rem 0 var(--secondary-color, #ff0070);
+  }
+}
