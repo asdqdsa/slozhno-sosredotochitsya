@@ -81,10 +81,6 @@
     --bg-img: var(--bg-img-light);
   }
 
-  :root .title-decor {
-    background-color: var(--bg-light-color, #fff1f7);
-  }
-
   :root .header__decoration {
     opacity: 0;
   }
@@ -112,16 +108,8 @@
     color: var(--text-color, #353430);
   }
 
-  :root .main {
-    background-color: var(--bg-light-color, #fff1f7);
-  }
-
   :root .main__title {
     color: var(--text-color, #353430);
-  }
-
-  :root .footer {
-    background-color: var(--bg-light-color, #fff1f7);
   }
 
   :root .footer__title {

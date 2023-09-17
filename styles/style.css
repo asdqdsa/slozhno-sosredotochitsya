@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   background-attachment: fixed;
+  background-color: var(--primary-color);
   background-image: var(--bg-img);
   background-position: center;
   background-size: cover;
@@ -14,13 +15,11 @@
 
 .header {
   display: grid;
-  background-image: var(--bg-img);
   padding-block: 1rem;
   padding-inline: 1rem;
 }
 
 .title-decor {
-  background-color: var(--primary-color, #000028);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,6 +76,7 @@
 
 .header__theme-menu-button_active {
   opacity: 0.4;
+  outline: 0.1rem solid currentColor;
   pointer-events: none;
 }
 
@@ -143,7 +143,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color, #000028);
   gap: 5rem;
   padding-block: 4rem;
   padding-inline: 1rem;
@@ -224,7 +223,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--primary-color, #000028);
   min-block-size: 66.7rem;
   padding-block: 1rem;
   padding-inline: 1rem;
