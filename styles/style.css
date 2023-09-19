@@ -14,7 +14,10 @@
 }
 
 .header {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  block-size: 100svb;
+  min-block-size: 668px;
   padding-block: 1rem;
   padding-inline: 1rem;
 }
@@ -135,10 +138,6 @@
   line-height: 2.34rem;
 }
 
-.text-line-break {
-  display: block;
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -222,7 +221,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-block-size: 66.7rem;
+  block-size: 100svb;
+  min-block-size: 667px;
   padding-block: 1rem;
   padding-inline: 1rem;
 }
@@ -242,6 +242,8 @@
   }
 
   .header {
+    block-size: 100svb;
+    min-block-size: 1024px;
     padding-block: 2rem;
     padding-inline: 2rem;
   }
@@ -337,7 +339,8 @@
   }
 
   .footer {
-    min-block-size: 102.4rem;
+    block-size: 100svb;
+    min-block-size: 1024px;
     padding-block: 2rem;
     padding-inline: 2rem;
   }
@@ -351,6 +354,11 @@
 @media (width >= 1024px) {
   .page {
     max-inline-size: 102.4rem;
+  }
+
+  .header {
+    block-size: 100vb;
+    min-block-size: 768px;
   }
 
   .header__theme-menu {
@@ -402,7 +410,8 @@
   }
 
   .footer {
-    min-block-size: 76.8rem;
+    block-size: 100vb;
+    min-block-size: 768px;
   }
 
   .footer__title {
